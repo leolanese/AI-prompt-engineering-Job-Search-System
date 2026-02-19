@@ -22,7 +22,7 @@ Most job searches suffer from three critical failure modes:
 2. **Too noisy** — no filtering logic means junior roles, pipeline ads, and speculative CV grabs pollute results
 3. **Unverifiable** — AI-assisted searches often return plausible-sounding but fabricated or dead links
 
-This prompt eliminates all three by enforcing URL verification before any role is included, applying hard exclusion rules for seniority, and separating results into clearly defined sectors and location categories.
+> This prompt eliminates all three by enforcing URL verification before any role is included, applying hard exclusion rules for seniority, and separating results into clearly defined sectors and location categories.
 
 ---
 
@@ -41,8 +41,6 @@ Each execution of this prompt surfaces the real-time scale of the UK Angular dev
 | CWJobs | 47+ remote Angular roles |
 | JobSite, Indeed, SimplyHired | Additional contract and perm listings |
 
-This confirms that **Senior Angular is one of the most actively recruited front-end specialisms in the UK**, with genuine demand across both permanent and contract markets simultaneously.
-
 ---
 
 ### 🟢 Commercial Sector Findings
@@ -60,7 +58,7 @@ The commercial results reveal a market split into two distinct hiring patterns:
 - £500/day — healthcare, SaaS, and 9-month contracts
 - £700–£850/day — investment banking and high-complexity financial systems (Inside IR35, umbrella)
 
-A notable emerging signal: **Angular 19/20 experience is already appearing in job descriptions** (sports betting platform, AI/LLM context engineering roles), suggesting employers are pushing ahead of the Angular version curve faster than many candidates anticipate.
+A notable emerging signal: As an example, a **Angular 19/20 experience is already appearing in job descriptions** (sports betting platform, AI/LLM context engineering roles), suggesting employers are pushing ahead of the Angular version curve faster than many candidates anticipate.
 
 ---
 
@@ -73,7 +71,7 @@ Government demand for Angular is real but concentrated in specific patterns:
 - **MOD and Defence contracts** often run 12 months with rolling extensions, making them high-value despite IR35 treatment
 - **NPPV3 clearance** is emerging alongside SC for certain high-profile policing/justice programmes at £520/day
 
-The government market is less price-transparent than commercial but offers longer contract durations and greater stability.
+> The government market is less price-transparent than commercial but offers longer contract durations and greater stability.
 
 ---
 
@@ -106,6 +104,9 @@ One of the most valuable outputs of running this prompt multiple times is unders
 | **JobServe** ★ | Contract specialist, daily updated; essential for high-frequency contract searchers |
 | **Hiring.cafe** ★ | AI-aggregated early-market roles; requires manual browser access but surfaces roles before they reach boards |
 | **Indeed / SimplyHired** | Government and public sector listings; FDM and consultancy SC-cleared roles |
+
+
+** Data mining is not just about finding roles, it's about understanding the ecosystem of where roles appear first and how to leverage each source for maximum efficiency. 
 
 ---
 
@@ -230,6 +231,25 @@ Steps that work:
 ✅ **Clearance Variants**: Always include: `("SC Cleared" OR "SC Clearable" OR "SC eligibility" OR "UKSV")`  
 ✅ **IR35 Filtering**: For contract roles, prioritize `#OutsideIR35` posts to avoid inside-IR35 contracts  
 ✅ **Tool Requirement**: This prompt requires AI with live browsing/search (Perplexity, Bing Chat, ChatGPT+Browsing). Standard LLMs cannot access live LinkedIn/job data.
+
+---
+
+### ⚖️ Legal Disclaimer & Fair Use Notice
+
+#### What This Tool Is
+This is a personal, non-commercial AI-assisted job search tool. It instructs an AI model to conduct structured searches across publicly accessible job board URLs, compile results into an organised report, and return direct links to the original source listings — functionally equivalent to a person manually visiting multiple job boards and noting relevant roles in a spreadsheet.
+#### Data Sources & How They Are Accessed
+All listings surfaced are drawn from **publicly accessible, search-engine-indexed web pages**, published by employers and agencies with the express intent of broad public distribution. No authenticated portals, private databases, or ATS systems are accessed. Where a URL returns an access error (403), the tool flags it with ⚠️ and does not attempt to bypass any access control. Content is retrieved via standard HTTP requests, identical to a web browser visiting a page, and is not stored, cached, or redistributed.
+#### Intellectual Property & Fair Use
+Job listings remain the intellectual property of the employers, agencies, and platforms that created them. This tool does not reproduce full job descriptions verbatim. Summarised details (title, rate, tech stack) constitute **fair dealing for research and private study** under the Copyright, Designs and Patents Act 1988, s.29. Every result includes a direct hyperlink to the original source, driving attribution and traffic back to the originating platform. This tool does not divert or disintermediate traffic — it directs users to original listings more efficiently:
+#### Always Use the Original Source
+**The original job board listing is always the authoritative source. This report is a reference index only.**
+- Always click through to verify the full job description before applying
+- Confirm the role is still active — filled positions are not always removed promptly (roles >14 days old are flagged 🕐)
+- Apply only through official channels on the source platform
+- Treat salary and rate figures as indicative — actual compensation may differ
+#### MIT Limitation of Liability
+Results are based on publicly available data at the time of search execution. Accuracy, completeness, and link availability cannot be guaranteed. Users rely on this output at their own discretion.
 
 ---
 
