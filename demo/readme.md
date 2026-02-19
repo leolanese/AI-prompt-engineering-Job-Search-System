@@ -1,1 +1,1 @@
-- demo files (.docx, .html, etc)
+demo files (.docx, .html, etc)
