@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is not a simple job search query. It is a **structured, multi-source intelligence system** designed to surface every active Senior Angular / Front-End Developer opportunity in the UK market — across commercial, government, and remote EU sectors — with a focus on verified, real job links and zero fabricated results.
+This is not a simple job search query. It is a **structured, multi-source intelligence system** designed to surface every active Senior Angular / Front-End Developer opportunity in the UK market — across commercial, government, and remote EU sectors, with a focus on verified, real job links and zero fabricated results.
 
 When executed, it runs **14 sequential search steps** across **13 distinct job platforms**, applies strict quality control to every result, and outputs a fully formatted, horizontally scrollable HTML report with colour-coded badges, live apply links, and deduplication across sources.
 
@@ -14,7 +14,7 @@ When executed, it runs **14 sequential search steps** across **13 distinct job p
 
 Most job searches suffer from three critical failure modes:
 
-1. **Too narrow** — searching one or two boards misses roles posted exclusively elsewhere (e.g. TotalJobs surfaced an investment bank contract at £850/day not found on Reed or CWJobs)
+1. **Too narrow** — searching one or two boards misses roles posted exclusively elsewhere (e.g. TotalJobs surfaced an investment bank contract at £nnn/day not found on Reed or CWJobs)
 2. **Too noisy** — no filtering logic means junior roles, pipeline ads, and speculative CV grabs pollute results
 3. **Unverifiable** — AI-assisted searches often return plausible-sounding but fabricated or dead links
 
