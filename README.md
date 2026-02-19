@@ -1,4 +1,4 @@
-# AI prompt-engineering — Job Search System
+# AI prompt-engineering. Job Search System
 
 ## What This Prompt Does & Why It's Powerful
 
