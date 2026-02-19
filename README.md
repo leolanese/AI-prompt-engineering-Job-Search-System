@@ -3,10 +3,10 @@
 
 ## Part 1: AUTOMATIC Prompt search for jobs hunting
 
-⚠️ Tool Requirement Still Applies:
-✅ Works with: Perplexity Pro, Bing Chat/Copilot, ChatGPT + Browsing, Claude + Web Search
-❌ Won't work with: Standard ChatGPT, local LLMs, or any AI without live internet access
-(They will hallucinate job listings — never trust unverified results)
+⚠️ Tool Requirement Still Applies:<br/>
+✅ Works with: Perplexity Pro, Bing Chat/Copilot, ChatGPT + Browsing, Claude + Web Search<br/>
+❌ Won't work with: Standard ChatGPT, local LLMs, or any AI without live internet access<br/>
+(They will hallucinate job listings — never trust unverified results)<br/><br/>
 
 ⚠️ Requires AI with live browsing/search. Standard LLMs will hallucinate (I used Perperxity, Claude and/or Grok)
 
