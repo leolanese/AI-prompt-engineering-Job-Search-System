@@ -1,5 +1,20 @@
 # AI prompt-engineering
 
+## The Problem It Solves 
+frames the three core failure modes of typical AI job searches (too narrow, too noisy, unverifiable) and explains precisely how each guardrail in the prompt addresses them.
+
+## What the Results Show 
+broken into four sub-sections: raw market scale (900+ live roles across sources before deduplication), commercial salary banding (£55k perm up to £850/day contract), government sector patterns (clearance tiers, IR35 reality, NPPV3 emergence), and the LinkedIn recruiter layer (roles that fill in 48–72 hours before they hit boards). This is by default, can be customised.
+
+## How to Use the Results 
+split by job type (permanent, contract, government, early market) with specific tactical advice for each.
+
+## Refresh Strategy 
+a cadence table showing what to run daily vs weekly vs 2–3× per week, with the reasoning behind each frequency.
+
+## Honest Limitations 
+five things the prompt cannot do, stated plainly. This section is intentionally included so expectations are calibrated and the gaps (EU Remote, gated portals, LinkedIn post content) are understood rather than discovered by surprise.
+
 
 ## Part 1: AUTOMATIC Prompt search for job hunting +  Aggregator Discovery
 
