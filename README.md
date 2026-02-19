@@ -2,6 +2,10 @@
 
 ## What This Prompt Does & Why It's Powerful
 
+## Demo
+
+![Demo](./demo/demo.png)
+
 ## Overview
 
 This is not a simple job search query. It is a **structured, multi-source intelligence system** designed to surface every active Senior Angular / Front-End Developer opportunity in the UK market — across commercial, government, and remote EU sectors, with a focus on verified, real job links and zero fabricated results.
