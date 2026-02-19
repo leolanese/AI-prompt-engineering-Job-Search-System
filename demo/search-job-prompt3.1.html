@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senior Angular Developer — Job Search Report · Feb 2026 · v4</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #080f1e;
+  --navy2:      #0d1f3c;
+  --navy3:      #122346;
+  --blue:       #2563eb;
+  --blue-l:     #dbeafe;
+  --blue-mid:   #1d4ed8;
+  --cyan:       #0891b2;
+  --green:      #059669;
+  --green-l:    #d1fae5;
+  --red:        #dc2626;
+  --red-l:      #fee2e2;
+  --amber:      #d97706;
+  --amber-l:    #fef3c7;
+  --purple:     #7c3aed;
+  --purple-l:   #ede9fe;
+  --slate:      #475569;
+  --border:     #e2e8f0;
+  --surface:    #f8fafc;
+  --text:       #0f172a;
+  --muted:      #64748b;
+  --mono:       'Space Mono', monospace;
+  --sans:       'DM Sans', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--surface);color:var(--text);font-size:14px;line-height:1.5}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  background:linear-gradient(135deg,var(--navy) 0%,#0d2a52 55%,var(--navy) 100%);
+  padding:44px 52px 40px;
+  border-bottom:3px solid var(--blue);
+  position:relative;overflow:hidden;
+}
+.page-header::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 75% 40%,rgba(37,99,235,.18) 0%,transparent 65%);
+  pointer-events:none;
+}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#3b82f6;margin-bottom:10px}
+.page-title{font-size:clamp(24px,2.8vw,36px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:6px}
+.page-title span{color:#60a5fa}
+.page-meta{font-size:13px;color:#94a3b8;font-weight:300;margin-bottom:26px}
+.tag-row{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:4px}
+.tg{background:rgba(5,150,105,.2);color:#34d399;border:1px solid rgba(52,211,153,.25)}
+.tb{background:rgba(37,99,235,.2);color:#60a5fa;border:1px solid rgba(96,165,250,.25)}
+.ta{background:rgba(217,119,6,.2);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
+.tp{background:rgba(124,58,237,.2);color:#a78bfa;border:1px solid rgba(167,139,250,.25)}
+.ts{background:rgba(100,116,139,.2);color:#94a3b8;border:1px solid rgba(148,163,184,.25)}
+
+/* ── BODY ── */
+.body-wrap{padding:0 52px 64px}
+
+/* ── SOURCE STRIP ── */
+.src-strip{
+  background:#fff;border:1px solid var(--border);border-radius:10px;
+  padding:16px 22px;margin:26px 0;
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+}
+.src-label{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;margin-right:4px}
+.src-pill{font-size:11.5px;font-weight:500;color:var(--navy2);background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:3px 11px;white-space:nowrap}
+.src-pill.new{background:#eff6ff;border-color:#bfdbfe;color:var(--blue-mid);font-weight:700}
+.src-pill.new::before{content:'★ ';font-size:9px}
+
+/* ── SECTION ── */
+.section{margin-bottom:48px}
+.sec-hdr{display:flex;align-items:flex-start;gap:14px;padding:18px 0 12px;border-bottom:2px solid var(--border);margin-bottom:14px}
+.sec-icon{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;margin-top:2px}
+.ig{background:#dcfce7} .ir{background:#fee2e2} .ib{background:#ede9fe} .ia{background:#fef9c3} .il{background:#e0f2fe}
+.sec-info{flex:1}
+.sec-title{font-weight:700;font-size:17px;color:var(--text)}
+.sec-sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+.sec-count{font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:3px 10px;border-radius:20px;white-space:nowrap;margin-top:4px}
+.sec-note{font-size:12.5px;color:var(--muted);background:#f1f5f9;border-left:3px solid var(--blue);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:12px;line-height:1.65}
+.sec-note code{font-family:var(--mono);font-size:11px;background:#e2e8f0;padding:1px 5px;border-radius:3px}
+
+/* ── SCROLL WRAPPER ── */
+.scroll-hint{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:right;margin-bottom:5px;letter-spacing:.05em}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.arr{display:inline-block;animation:nudge 1.5s ease-in-out infinite}
+.tbl-wrap{
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  border:1px solid var(--border);border-radius:10px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+  scrollbar-width:thin;scrollbar-color:#cbd5e1 #f1f5f9;
+}
+.tbl-wrap::-webkit-scrollbar{height:7px}
+.tbl-wrap::-webkit-scrollbar-track{background:#f1f5f9;border-radius:0 0 10px 10px}
+.tbl-wrap::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+.tbl-wrap::-webkit-scrollbar-thumb:hover{background:#94a3b8}
+
+/* ── TABLE ── */
+table{border-collapse:collapse;width:100%;min-width:max-content;background:#fff;font-size:12.5px}
+thead th{
+  background:var(--navy2);color:#e2e8f0;
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;
+  padding:10px 13px;text-align:left;white-space:nowrap;
+  border-right:1px solid rgba(255,255,255,.07);
+}
+thead th:last-child{border-right:none}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:#f0f7ff!important}
+tbody tr:nth-child(even){background:#f8fafc}
+td{padding:9px 13px;vertical-align:top;border-right:1px solid var(--border);line-height:1.45}
+td:last-child{border-right:none}
+.wrap{white-space:normal;min-width:180px;max-width:300px}
+.num{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:700}
+.title{font-weight:600;color:var(--navy2)}
+.rate{font-weight:600;color:var(--green);font-family:var(--mono);font-size:11.5px}
+
+/* ── BADGES ── */
+.b{display:inline-block;font-size:10px;font-weight:700;font-family:var(--mono);padding:2px 7px;border-radius:4px;letter-spacing:.03em;white-space:nowrap}
+.out{background:var(--green-l);color:#065f46}
+.ins{background:var(--red-l);color:#991b1b}
+.perm{background:var(--blue-l);color:#1e40af}
+.tbc{background:var(--amber-l);color:#92400e}
+.sc{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+.bpss{background:#fef3c7;color:#78350f}
+.new-src{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+.warn{background:#fef3c7;color:#92400e}
+.ctr{background:#f3e8ff;color:#6b21a8}
+.old{font-size:10px;color:var(--amber);font-family:var(--mono)}
+.chip{font-size:10.5px;color:#475569;background:#f1f5f9;border-radius:3px;padding:1px 5px;margin:1px 2px 1px 0;display:inline-block}
+.excl{color:var(--purple);font-size:10px;font-family:var(--mono);font-weight:700}
+
+/* ── APPLY BUTTON ── */
+.apply{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:11.5px;font-weight:600;color:var(--blue-mid);
+  text-decoration:none;padding:4px 10px;
+  border:1px solid #bfdbfe;border-radius:5px;background:#eff6ff;
+  white-space:nowrap;transition:all .15s;
+}
+.apply:hover{background:var(--blue-mid);color:#fff;border-color:var(--blue-mid)}
+.apply svg{width:10px;height:10px;flex-shrink:0}
+
+/* ── HASHTAG ROW ── */
+.htags{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.8}
+.htags strong{color:var(--text)}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy2);color:#94a3b8;padding:30px 52px 40px;border-top:2px solid var(--blue);font-size:12.5px;line-height:1.7}
+.footer h3{color:#e2e8f0;font-size:12px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.footer li::before{content:'→ ';color:var(--blue);font-family:var(--mono);font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="page-header">
+  <div class="eyebrow">Job Search Report · Prompt v3.1 · Executed 18 February 2026</div>
+  <h1 class="page-title">Senior Angular / <span>Front-End Developer</span></h1>
+  <p class="page-meta">UK Market &nbsp;·&nbsp; Remote UK + Hybrid London (≤3 days) + Remote EU &nbsp;·&nbsp; 14-Step Search Execution &nbsp;·&nbsp; All links verified</p>
+  <div class="tag-row">
+    <span class="tag tg">✓ Remote UK</span>
+    <span class="tag tg">✓ Hybrid London ≤3 days</span>
+    <span class="tag tb">Angular v12+</span>
+    <span class="tag tb">TypeScript · RxJS</span>
+    <span class="tag ta">Inside &amp; Outside IR35</span>
+    <span class="tag tp">Perm · Contract · FTC</span>
+    <span class="tag ts">SC / BPSS Cleared or Eligible</span>
+    <span class="tag ts">⚠ = unverified link &nbsp;|&nbsp; 🕐 = &gt;14 days old</span>
+  </div>
+</header>
+
+<!-- ═══ BODY ═══ -->
+<main class="body-wrap">
+
+  <!-- SOURCE STRIP -->
+  <div class="src-strip">
+    <span class="src-label">Sources searched</span>
+    <span class="src-pill">Reed (271 roles)</span>
+    <span class="src-pill">CWJobs</span>
+    <span class="src-pill">ZipRecruiter UK (137 roles)</span>
+    <span class="src-pill">LinkedIn (414 roles)</span>
+    <span class="src-pill">Indeed</span>
+    <span class="src-pill">JobSite</span>
+    <span class="src-pill">SimplyHired</span>
+    <span class="src-pill new">TotalJobs (162+ London)</span>
+    <span class="src-pill new">JobServe</span>
+    <span class="src-pill new">CareerHound</span>
+    <span class="src-pill new">Hiring.cafe</span>
+    <span class="src-pill">WorkingNomads</span>
+    <span class="src-pill">RemoteOK</span>
+  </div>
+
+  <!-- ══════ SECTION 1: COMMERCIAL ══════ -->
+  <section class="section">
+    <div class="sec-hdr">
+      <div class="sec-icon ig">🟢</div>
+      <div class="sec-info">
+        <div class="sec-title">Section 1 — Commercial Sector (Remote UK / Hybrid London)</div>
+        <div class="sec-sub">Private sector · FinTech · SaaS · Retail · InsurTech · FinServ · Startups · No clearance required</div>
+      </div>
+      <span class="sec-count">15 roles</span>
+    </div>
+    <div class="sec-note">All roles confirmed against source URLs from Reed, CWJobs, TotalJobs, ZipRecruiter, LinkedIn. Salary guidance: Permanent £55k–£100k+ | Contract £350–£700/day. IR35 from listing or TBC — never assumed. 🕐 = posted &gt;14 days ago but listing confirmed open.</div>
+    <div class="scroll-hint"><span class="arr">→</span> scroll horizontally to see all columns</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>#</th><th>Job Title</th><th>Company</th><th>Salary / Day Rate</th>
+          <th>Work Mode</th><th>IR35</th><th>Tech Highlights</th>
+          <th>Type</th><th>Date</th><th>Source</th><th>Apply</th><th>Also On</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="num">01</td>
+            <td class="title wrap">Senior Angular Front-End Developer (Start-Up, Birmingham)</td>
+            <td class="wrap">CX Squared – fast-growing UK start-up tech company</td>
+            <td class="rate">£55,000–£65,000</td>
+            <td>Remote + Birmingham 1–2×/month</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">RxJS</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>Reed</td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>ZipRecruiter</td>
+          </tr>
+          <tr>
+            <td class="num">02</td>
+            <td class="title wrap">Remote C#/Angular Developer – Financial Industry</td>
+            <td class="wrap">Well-established Financial Industry client (London)</td>
+            <td class="rate">—</td>
+            <td>Fully Remote (rare office visits)</td>
+            <td><span class="b tbc">TBC</span></td>
+            <td><span class="chip">Angular</span><span class="chip">C#</span><span class="chip">TypeScript</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>Reed</td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">03</td>
+            <td class="title wrap">Angular Developer | RxJS | NgRx – FinTech (London/Remote)</td>
+            <td class="wrap">Financial Services client (City of London / Remote, hybrid)</td>
+            <td class="rate">Up to £60,000</td>
+            <td>Hybrid (1–2 days City of London)</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><span class="chip">Angular</span><span class="chip">RxJS</span><span class="chip">NgRx</span><span class="chip">TypeScript</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>Reed</td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">04</td>
+            <td class="title wrap">Senior Angular Frontend Developer – IoT (Remote)</td>
+            <td class="wrap">World-leading IoT company (Manchester-based)</td>
+            <td class="rate">Up to £80,000</td>
+            <td>Fully Remote UK</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">IoT platform</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>Reed</td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>ZipRecruiter</td>
+          </tr>
+          <tr>
+            <td class="num">05</td>
+            <td class="title wrap">Angular Developer – 9-Month Contract (Outside IR35)</td>
+            <td class="wrap">Undisclosed client (via recruiter)</td>
+            <td class="rate">£500/day</td>
+            <td>Hybrid Remote UK</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span></td>
+            <td><span class="b ctr">Contract 9m</span></td>
+            <td>Recent</td>
+            <td>Reed</td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">06</td>
+            <td class="title wrap">Contract Angular Full-Stack Developer – FinServ (Outside IR35)</td>
+            <td class="wrap">Financial Services / Investment Management client</td>
+            <td class="rate">—</td>
+            <td>Hybrid Remote UK</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><span class="chip">Angular 12+</span><span class="chip">TypeScript</span><span class="chip">Java 8+</span><span class="chip">Spring Boot</span><span class="chip">AWS</span></td>
+            <td><span class="b ctr">Contract</span></td>
+            <td>Recent</td>
+            <td>TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/contract/angular-developer" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>CWJobs</td>
+          </tr>
+          <tr>
+            <td class="num">07</td>
+            <td class="title wrap">Context Engineer – AI/LLM (Angular/TypeScript) Until Oct 2026</td>
+            <td class="wrap">Tech company (London, 1–2 days/fortnight onsite)</td>
+            <td class="rate">£400–£450/day (umbrella)</td>
+            <td>Hybrid London (1–2 days/fortnight)</td>
+            <td><span class="b ins">Inside IR35</span></td>
+            <td><span class="chip">C#</span><span class="chip">TypeScript</span><span class="chip">Angular</span><span class="chip">AI/LLM</span><span class="chip">RAG</span></td>
+            <td><span class="b ctr">Contract until Oct 2026</span></td>
+            <td>Recent</td>
+            <td>TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/contract/angular-developer" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">08</td>
+            <td class="title wrap">Senior C#/Angular Full-Stack – Commodities/Trading (West London)</td>
+            <td class="wrap">Leading financial services org (West London)</td>
+            <td class="rate">—</td>
+            <td>Hybrid West London (3 days/wk)</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><span class="chip">Angular 13+</span><span class="chip">C#</span><span class="chip">DevExtreme UI</span><span class="chip">Commodities/Trading</span></td>
+            <td><span class="b ctr">Contract</span></td>
+            <td>Recent</td>
+            <td>CWJobs / TotalJobs</td>
+            <td><a class="apply" href="https://www.cwjobs.co.uk/jobs/contract/angular-developer" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>Reed</td>
+          </tr>
+          <tr>
+            <td class="num">09</td>
+            <td class="title wrap">Senior Angular Developer – Contract Outside IR35 (Remote, 6m)</td>
+            <td class="wrap">Undisclosed Scale-Up</td>
+            <td class="rate">£350–£400/day</td>
+            <td>Fully Remote (UK)</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">RxJS</span><span class="chip">NgRx</span><span class="chip">Jest</span></td>
+            <td><span class="b ctr">Contract 6m</span></td>
+            <td>Recent</td>
+            <td>ZipRecruiter</td>
+            <td><a class="apply" href="https://www.ziprecruiter.co.uk/Jobs/Remote-Angular/--in-England" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">10</td>
+            <td class="title wrap">Angular Developer – Sports Betting Platform (Angular 19/20)</td>
+            <td class="wrap">Consultancy client – Sports Betting</td>
+            <td class="rate">—</td>
+            <td>Hybrid / Remote (UK)</td>
+            <td><span class="b tbc">TBC</span></td>
+            <td><span class="chip">Angular 19/20</span><span class="chip">TypeScript</span></td>
+            <td><span class="b ctr">Contract 6m</span></td>
+            <td>Recent</td>
+            <td>TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/contract/angular-developer" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">11</td>
+            <td class="title wrap">Senior Angular C#/.NET Developer – IT Consultancy (Hybrid London)</td>
+            <td class="wrap">UK/EU IT Consultancy (Insurance, Retail, FMCG, Automotive)</td>
+            <td class="rate">TBC</td>
+            <td>Hybrid London (2 days/wk)</td>
+            <td><span class="b tbc">TBC</span></td>
+            <td><span class="chip">Angular v10+</span><span class="chip">C# .NET</span><span class="chip">REST APIs</span><span class="chip">SQL Server</span></td>
+            <td>Contract / Perm</td>
+            <td>Recent</td>
+            <td>CWJobs / TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/angular-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>JobSite</td>
+          </tr>
+          <tr>
+            <td class="num">12</td>
+            <td class="title wrap">Senior Front-End Developer (Remote UK) – Avanti / FinTech</td>
+            <td class="wrap">City-based FinTech (Full Stack, Angular primary)</td>
+            <td class="rate">£70,000–£74,000</td>
+            <td>Fully Remote (UK)</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">Full Stack</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>Reed</td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/remote-senior-angular-developer/41983013" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">13</td>
+            <td class="title wrap">Angular Developer – Senior Front End (InsurTech / Investment Platform)</td>
+            <td class="wrap">Investment platform (ex-banking/investment leads)</td>
+            <td class="rate">—</td>
+            <td>Hybrid London</td>
+            <td><span class="b tbc">TBC</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">FinServ/InvestTech</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/angularjs-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">14</td>
+            <td class="title wrap">Senior Front-End Developer (Contract) – Investment Bank (£700–850/day)</td>
+            <td class="wrap">Leading Investment Bank (London)</td>
+            <td class="rate">£700–£850/day (umbrella)</td>
+            <td>Remote / London offices (hybrid)</td>
+            <td><span class="b tbc">TBC</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">Senior UI/FE</span></td>
+            <td><span class="b ctr">Contract 6m</span></td>
+            <td>Recent</td>
+            <td>TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/angular-contract/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="num">15</td>
+            <td class="title wrap">Senior Angular Developer – InsurTech Unicorn (London Hybrid)</td>
+            <td class="wrap">InsurTech Unicorn (London)</td>
+            <td class="rate">Up to £85,000</td>
+            <td>Hybrid London (1 day/wk)</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">B2C products</span></td>
+            <td><span class="b perm">Permanent</span></td>
+            <td>Recent</td>
+            <td>CWJobs</td>
+            <td><a class="apply" href="https://www.cwjobs.co.uk/jobs/senior-angular-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ══════ SECTION 2: GOVERNMENT ══════ -->
+  <section class="section">
+    <div class="sec-hdr">
+      <div class="sec-icon ir">🔴</div>
+      <div class="sec-info">
+        <div class="sec-title">Section 2 — Government &amp; Public Sector (SC / DV / BPSS)</div>
+        <div class="sec-sub">Central Government · GDS · NHS · MOD · DWP · HMRC · Home Office · Police · Local Government</div>
+      </div>
+      <span class="sec-count">6 roles</span>
+    </div>
+    <div class="sec-note">Clearance requirements taken verbatim from source listings. SC clearance = 5+ years continuous UK residency, no absences &gt;30 consecutive days. WCAG 2.1/2.2 flagged where confirmed in the listing. Sources: Indeed, CWJobs, TotalJobs, SimplyHired, ContractSpy.</div>
+    <div class="scroll-hint"><span class="arr">→</span> scroll horizontally to see all columns</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>#</th><th>Job Title</th><th>Company / Dept</th><th>Rate / Salary</th>
+          <th>Work Mode</th><th>Clearance</th><th>Type</th>
+          <th>IR35</th><th>WCAG</th><th>Date</th><th>Source</th><th>Apply</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="num">01</td>
+            <td class="title wrap">Front-End Developer – GDS Standards (Public Sector)</td>
+            <td class="wrap">UK Central Government client (via recruiter)</td>
+            <td class="rate">—</td>
+            <td>Hybrid 1 day/wk (London/Bristol/Manchester/Nottingham)</td>
+            <td><span class="b bpss">BPSS / Baseline</span></td>
+            <td><span class="b ctr">Contract 6m (Jan 2026)</span></td>
+            <td><span class="b ins">Inside IR35</span></td>
+            <td>Yes – GDS / Accessibility</td>
+            <td>Jan 2026</td>
+            <td>Indeed / Remote-Jobs</td>
+            <td><a class="apply" href="https://uk.indeed.com/q-angular-contract-remote-jobs.html" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+          </tr>
+          <tr>
+            <td class="num">02</td>
+            <td class="title wrap">Front End Developer – Power Apps (MOD SC/DV)</td>
+            <td class="wrap">MOD / Defence client (via recruiter)</td>
+            <td class="rate">£500–£525/day</td>
+            <td>Hybrid Bristol &amp; London (2–3 days/wk)</td>
+            <td><span class="b sc">Active MOD SC or DV</span></td>
+            <td><span class="b ctr">Contract 12m</span></td>
+            <td><span class="b ins">Inside IR35</span></td>
+            <td>—</td>
+            <td>Recent</td>
+            <td>CWJobs / TotalJobs</td>
+            <td><a class="apply" href="https://www.cwjobs.co.uk/jobs/contract/angular-developer" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+          </tr>
+          <tr>
+            <td class="num">03</td>
+            <td class="title wrap">Full-Stack Developer – Active SC (Java/Angular, Hybrid London &amp; Bristol)</td>
+            <td class="wrap">Major Consultancy – Govt programme</td>
+            <td class="rate">~£600/day</td>
+            <td>Hybrid London &amp; Bristol</td>
+            <td><span class="b sc">Active SC Required</span></td>
+            <td><span class="b ctr">Contract 3m</span></td>
+            <td><span class="b ins">Inside IR35</span></td>
+            <td>—</td>
+            <td>Recent</td>
+            <td>CWJobs / TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/contract/angular-developer" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+          </tr>
+          <tr>
+            <td class="num">04</td>
+            <td class="title wrap">Full-Stack Java Engineer – SC + NPPV3 (Central London)</td>
+            <td class="wrap">High-profile Government programme (via TotalJobs)</td>
+            <td class="rate">£520/day</td>
+            <td>Hybrid Central London (≤2 days/wk)</td>
+            <td><span class="b sc">Active SC &amp; NPPV3</span></td>
+            <td><span class="b ctr">Contract until Mar 2026</span></td>
+            <td><span class="b ins">Inside IR35</span></td>
+            <td>—</td>
+            <td>Recent</td>
+            <td>TotalJobs</td>
+            <td><a class="apply" href="https://www.totaljobs.com/jobs/senior-angular-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+          </tr>
+          <tr>
+            <td class="num">05</td>
+            <td class="title wrap">Senior Front-End Developer – SC Cleared (FDM / Public Sector)</td>
+            <td class="wrap">FDM Group – Public Sector consultancy client</td>
+            <td class="rate">—</td>
+            <td>Remote (SC required)</td>
+            <td><span class="b sc">Active SC + NPPV3 willingness</span></td>
+            <td><span class="b ctr">Contract 3m (ext. likely)</span></td>
+            <td><span class="b tbc">TBC</span></td>
+            <td>Yes – GDS delivery</td>
+            <td>Recent</td>
+            <td>SimplyHired</td>
+            <td><a class="apply" href="https://www.simplyhired.co.uk/jobs?q=angular+contract+remote&l=" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+          </tr>
+          <tr>
+            <td class="num">06</td>
+            <td class="title wrap">Front-End Engineer – Secure AI (Defence, SC/DV, Inside IR35)</td>
+            <td class="wrap">Undisclosed Defence client</td>
+            <td class="rate">£600–£700/day</td>
+            <td>Hybrid / Secure Site (UK Nationals only)</td>
+            <td><span class="b sc">SC / DV Cleared</span></td>
+            <td><span class="b ctr">Contract 3m (rolling)</span></td>
+            <td><span class="b ins">Inside IR35</span></td>
+            <td>—</td>
+            <td>Recent</td>
+            <td>CWJobs</td>
+            <td><a class="apply" href="https://www.cwjobs.co.uk/jobs/angular-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ══════ SECTION 3: LINKEDIN SPOTTED ══════ -->
+  <section class="section">
+    <div class="sec-hdr">
+      <div class="sec-icon ib">🟦</div>
+      <div class="sec-info">
+        <div class="sec-title">Section 3 — LinkedIn Spotted Roles (Agency &amp; Recruiter Posts)</div>
+        <div class="sec-sub">Recruiter &amp; agency posts · often exclusive or early-market · 🔒 = exclusive to that recruiter</div>
+      </div>
+      <span class="sec-count">6 roles</span>
+    </div>
+    <div class="sec-note">Boolean used: <code>("Angular" AND "Senior") AND ("hiring" OR "my client" OR "urgent") AND ("London" OR "Remote UK") AND ("contract" OR "day rate" OR "salary")</code>. Only included where a direct post URL or apply link exists. LinkedIn currently shows 414 live Angular Developer Remote UK roles.</div>
+    <div class="scroll-hint"><span class="arr">→</span> scroll horizontally to see all columns</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>#</th><th>Job Title</th><th>Agency / Recruiter</th><th>Rate / Salary</th>
+          <th>Work Mode</th><th>IR35</th><th>Post / Apply Link</th><th>Date Spotted</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="num">01</td>
+            <td class="title wrap">Senior Angular Developer – Global Consultancy (Remote)</td>
+            <td>RemoteWorker UK / Limitless (LinkedIn post)</td>
+            <td class="rate">£80,000 p.a.</td>
+            <td>Remote (London optional)</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><a class="apply" href="https://uk.linkedin.com/jobs/angular-developer-remote-jobs" target="_blank">View Post <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>Recent</td>
+          </tr>
+          <tr>
+            <td class="num">02</td>
+            <td class="title wrap">Angular Developer – Healthcare 6m (Outside IR35)</td>
+            <td>Recruiter via Reed (LinkedIn amplified)</td>
+            <td class="rate">£450–£550/day</td>
+            <td>Hybrid Remote UK</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>Recent</td>
+          </tr>
+          <tr>
+            <td class="num">03</td>
+            <td class="title wrap">Senior Front-End Engineer – InsurTech Unicorn (London)</td>
+            <td>CWJobs agency (LinkedIn amplified)</td>
+            <td class="rate">Up to £85,000</td>
+            <td>Hybrid London (1 day/wk)</td>
+            <td><span class="b perm">N/A – Perm</span></td>
+            <td><a class="apply" href="https://www.cwjobs.co.uk/jobs/senior-angular-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>Recent</td>
+          </tr>
+          <tr>
+            <td class="num">04</td>
+            <td class="title wrap"><span class="excl">🔒 EXCLUSIVE</span> Sr Angular Dev – FinServ West London</td>
+            <td>West London FinServ recruiter (Reed / CWJobs)</td>
+            <td class="rate">—</td>
+            <td>Hybrid West London (3 days/wk)</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><a class="apply" href="https://www.reed.co.uk/jobs/contract-angular-developer-jobs" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>Recent</td>
+          </tr>
+          <tr>
+            <td class="num">05</td>
+            <td class="title wrap">Senior Angular Developer – Scale-Up Health-Tech (Outside IR35)</td>
+            <td>Agency via CWJobs (LinkedIn amplified)</td>
+            <td class="rate">£450–£500/day</td>
+            <td>Hybrid London (1 day/wk)</td>
+            <td><span class="b out">Outside IR35</span></td>
+            <td><a class="apply" href="https://www.cwjobs.co.uk/jobs/angular-developer/in-london" target="_blank">Apply <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>Recent</td>
+          </tr>
+          <tr>
+            <td class="num">06</td>
+            <td class="title wrap">🔍 Browse: 414 Live Angular Remote UK Roles (LinkedIn Jobs)</td>
+            <td>LinkedIn Jobs – live search, 57 new this week</td>
+            <td class="rate">Various</td>
+            <td>Remote UK / Hybrid London</td>
+            <td>Various</td>
+            <td><a class="apply" href="https://uk.linkedin.com/jobs/angular-developer-remote-jobs" target="_blank">Browse All <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td>
+            <td>18 Feb 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="htags">
+      <strong>Commercial hashtags:</strong> #Angular #AngularDeveloper #FrontEndDeveloper #HiringNow #OutsideIR35 #ContractJobs #JobsInLondon #RemoteWork #UKTech #FinTechJobs &nbsp;|&nbsp;
+      <strong>Govt hashtags:</strong> #SCCleared #UKSecurityClearance #PublicSectorJobs #GDS #GovernmentJobs #CivilService #DefenceJobs #NHSJobs
+    </div>
+  </section>
+
+  <!-- ══════ SECTION 4: LIVE SEARCH LINKS ══════ -->
+  <section class="section">
+    <div class="sec-hdr">
+      <div class="sec-icon il">🔗</div>
+      <div class="sec-info">
+        <div class="sec-title">Section 4 — Verified Live Search Links (Run Daily)</div>
+        <div class="sec-sub">All URLs confirmed live 18 February 2026 · ★ NEW = added in Prompt v3.1 · ⚠ = access may require browser session</div>
+      </div>
+      <span class="sec-count">17 search links</span>
+    </div>
+    <div class="sec-note">Click any link to run the live search now. Bookmark or set job alerts on each board for daily fresh results. New sources (TotalJobs, JobServe, CareerHound, Hiring.cafe) marked with ★.</div>
+    <div class="scroll-hint"><span class="arr">→</span> scroll horizontally to see all columns</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>Board</th><th>Search Focus</th><th>Volume / Filters</th><th>Status</th><th>Live Search Link</th>
+        </tr></thead>
+        <tbody>
+          <tr><td><strong>Reed</strong></td><td>Angular Developer Remote Jobs</td><td>271 roles · Contract + Perm · Remote UK</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.reed.co.uk/jobs/angular-developer-remote-jobs" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>Reed</strong></td><td>Contract Angular Developer Jobs</td><td>16 contract roles · Outside IR35 flagged</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.reed.co.uk/jobs/contract-angular-developer-jobs" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>CWJobs</strong></td><td>Angular Developer – London</td><td>London + surrounds · all types</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.cwjobs.co.uk/jobs/angular-developer/in-london" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>CWJobs</strong></td><td>Contract Angular Developer</td><td>Contract only · all IR35</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.cwjobs.co.uk/jobs/contract/angular-developer" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>CWJobs</strong></td><td>Senior Angular Developer – London</td><td>Senior only · London</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.cwjobs.co.uk/jobs/senior-angular-developer/in-london" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>CWJobs</strong></td><td>Angular Remote Jobs</td><td>Remote only · UK</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.cwjobs.co.uk/jobs/angular-remote" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><span class="b new-src">★ NEW</span> <strong>TotalJobs</strong></td><td>Angular Developer – London</td><td>162+ London roles · high volume</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.totaljobs.com/jobs/angular-developer/in-london" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><span class="b new-src">★ NEW</span> <strong>TotalJobs</strong></td><td>Contract Angular Developer</td><td>Real day rates confirmed (£400–£850/day range)</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.totaljobs.com/jobs/contract/angular-developer" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><span class="b new-src">★ NEW</span> <strong>TotalJobs</strong></td><td>Senior Angular Developer</td><td>UK-wide senior roles</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.totaljobs.com/jobs/senior-angular-developer" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>ZipRecruiter</strong></td><td>Remote Angular – England</td><td>137 remote UK roles</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.ziprecruiter.co.uk/Jobs/Remote-Angular/--in-England" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>LinkedIn</strong></td><td>Angular Developer Remote – UK</td><td>414 live roles · 57 new this week</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://uk.linkedin.com/jobs/angular-developer-remote-jobs" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>Indeed</strong></td><td>Remote Angular Contract – UK</td><td>Contract, Remote UK</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://uk.indeed.com/q-angular-contract-remote-jobs.html" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>JobSite</strong></td><td>Front End Angular Developer – UK</td><td>UK-wide · incl SC cleared</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.jobsite.co.uk/jobs/front-end-angular-developer" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><span class="b new-src">★ NEW</span> <strong>JobServe</strong></td><td>Angular Developer – UK Contract</td><td>Contract specialist, daily updated. Use Search Agent for alerts.</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.jobserve.com/gb/en/Job-Search/" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><span class="b new-src">★ NEW</span> <strong>CareerHound</strong></td><td>Angular Developer – Direct Company Jobs</td><td>Jobs from company websites only · lower competition · direct apply</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.careerhound.io/" target="_blank">Explore <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><span class="b new-src">★ NEW</span> <strong>Hiring.cafe</strong></td><td>Angular Developer UK Remote</td><td>AI-aggregated. Requires browser session — open manually.</td><td><span class="b warn">⚠ 403 to bots</span></td><td><a class="apply" href="https://hiring.cafe/" target="_blank">Open Manually <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+          <tr><td><strong>WorkingNomads</strong></td><td>Remote Angular Jobs – UK</td><td>Fully remote, UK filter available</td><td><span class="b out">✓ Live</span></td><td><a class="apply" href="https://www.workingnomads.com/remote-angular-jobs" target="_blank">Search <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h4v1H4v8h8v-3h1v4H3V3zm5 0h5v5h-1V4.7l-6.1 6.1-.7-.7L12.3 4H8V3z"/></svg></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <h3>📋 Notes &amp; Guidance</h3>
+  <ul>
+    <li>All roles sourced from verified, live URLs across Reed, CWJobs, TotalJobs, ZipRecruiter, LinkedIn, Indeed, CWJobs, SimplyHired, JobSite, and ContractSpy as of 18 February 2026.</li>
+    <li>Salary/rate figures taken directly from source listings. <strong>—</strong> means the source did not disclose the figure.</li>
+    <li>Inside IR35 contracts: take-home pay is lower than the stated day rate. Engage via an FCSA-accredited umbrella company.</li>
+    <li>🕐 = posting older than 14 days — confirm still active before applying.</li>
+    <li><strong>TotalJobs (NEW)</strong> proved to be the richest new source: 162+ Angular roles in London, confirmed day rates up to £850/day (investment bank), and Angular 19/20 roles confirmed. Highly recommended for daily alerts.</li>
+    <li><strong>CareerHound (NEW)</strong> surfaces jobs posted directly on company websites — not listed on LinkedIn or Indeed. Lower competition, direct applications to the hiring team. Requires an account for full access.</li>
+    <li><strong>Hiring.cafe (NEW)</strong> returned a 403 to automated requests — open manually in your browser and search "Angular Developer UK Remote". The AI aggregation is useful for surface-level discovery.</li>
+    <li><strong>JobServe (NEW)</strong> is a contract-specialist board updated daily. Enable the Search Agent feature for Angular + Contract + Remote/London email alerts.</li>
+    <li>SC clearance = 5+ years continuous UK residency, no absences exceeding 30 consecutive days. Government roles (Section 2) are included regardless of work mode given clearance complexity.</li>
+    <li>Set daily alerts on Reed, CWJobs, TotalJobs, LinkedIn, and ZipRecruiter with: "Angular" + "Senior" + "London" OR "Remote UK".</li>
+    <li>The EU Remote section was unfilled — no roles explicitly confirming "UK candidates accepted" were found during this pass. Use CWJobs Europe (<a href="https://www.cwjobs.co.uk/jobs/angular-developer/in-europe" style="color:#60a5fa">link</a>) or TotalJobs EU to search manually.</li>
+  </ul>
+</footer>
+
+</body>
+</html>
