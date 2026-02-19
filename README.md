@@ -1,7 +1,7 @@
 # AI prompt-engineering
 
 
-## Part 1: AUTOMATIC Prompt search for jobs hunting
+## Part 1: AUTOMATIC Prompt search for job hunting +  Aggregator Discovery
 
 ⚠️ Tool Requirement Still Applies:<br/>
 ✅ Works with: Perplexity Pro, Bing Chat/Copilot, ChatGPT + Browsing, Claude + Web Search<br/>
@@ -12,7 +12,7 @@
 
 ---
 
-##  Part 2: MANUAL SEARCH + LLM Analysis (Recommended)
+##  Part 2: MANUAL search + LLM Analysis
 ### Enhanced LinkedIn Search Strategy:
 
 > LinkedIn requires ALL terms to appear in EACH post.
