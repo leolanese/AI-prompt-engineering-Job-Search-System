@@ -4,7 +4,11 @@
 
 ## Demo
 
-![Demo](./demo/demo.png)
+Demo version 3.0
+![Demo version 3.0](./demo/demo_30.png)
+
+Demo version 4.0
+![Demo version 4.0](./demo/demo_40.png)
 
 ## Overview
 
