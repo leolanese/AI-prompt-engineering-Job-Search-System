@@ -1,6 +1,6 @@
 
 # 🔍 Technical Job Search Prompt — Senior Angular / Front-End Developer
-> Version 3.1 | Updated: February 2026 | Incorporates location tightening, new sources (TotalJobs, JobServe, CareerHound, Hiring.cafe), scrollable output, and URL-verification guardrails
+> Version 3.0 | Updated: February 2026 | Incorporates location tightening, new sources (TotalJobs, JobServe, CareerHound, Hiring.cafe), scrollable output, and URL-verification guardrails
 
 ---
 
